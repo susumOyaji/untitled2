@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1db6babe-677f-4392-b0a7-dd3d392189e7" name="デフォルト変更リスト" comment="" />
+    <list default="true" id="1db6babe-677f-4392-b0a7-dd3d392189e7" name="デフォルト変更リスト" comment="">
+      <change beforePath="$PROJECT_DIR$/android/src/main/java/com/example/untitled2/PluginCodelabPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/java/com/example/untitled2/PluginCodelabPlugin.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1vFjo6ozJgUEPCWNYdzc16Kthjf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -26,7 +28,7 @@
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Flutter.example/lib/main.dart">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/example/lib/main.dart" />
       <method v="2" />
