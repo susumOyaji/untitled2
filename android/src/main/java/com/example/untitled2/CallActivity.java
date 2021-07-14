@@ -1,4 +1,4 @@
-package com.example.untitled2;
+package com.example.plugin_code;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -47,21 +47,57 @@ public class CallActivity extends  Activity {
     public void onStart() {
         super.onStart();
 
-        answer.setOnClickListener(v -> OngoingCall.answer());
-        hangup.setOnClickListener(v -> OngoingCall.hangup());
+        //answer.setOnClickListener(v -> OngoingCall.answer());
+        answer.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                OngoingCall.answer();
+            }
+        });
+            
 
+        //hangup.setOnClickListener(v -> OngoingCall.hangup());
+        hangup.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                OngoingCall.hangup();
+            }
+        });    
+
+
+
+         /*   
+         Man man = new Man() {
+            @Override
+            public void laugh(String voice) {
+                System.out.println(voice);
+            }
+        };
+        
+        Man man = (voice) -> {System.out.println(voice);}
+
+        ラムダ式は関数型インターフェース、簡単に説明すると１つの抽象メソッドしか持たないインターフェースの場合に使用することができます。
+        
+        ラムダ式の書式は以下のようになります。
+        ( 実装するメソッドの引数 ) -> { 処理 }
+        実装するメソッドの引数 はvoiceとしましたが、任意の文字列（xなど）でも問題ありません。
+    
+
+
+
+        */
         // Subscribe to state change -> call updateUi when change
         new OngoingCall();
-        Disposable disposable = OngoingCall.state.subscribe(this::updateUi);
+        Disposable disposable = OngoingCall.state.subscribe(this.updateUi());
         disposables.add(disposable);
 
         // Subscribe to state change (only when disconnected) -> call finish to close phone call
         new OngoingCall();
         Disposable disposable2 = OngoingCall.state
-                .filter(state -> state == Call.STATE_DISCONNECTED)
+                .filter(state == Call.STATE_DISCONNECTED)
                 .delay(1, TimeUnit.SECONDS)
                 .firstElement()
-                .subscribe(this::finish);
+                .subscribe(this.finish());
 
         disposables.add(disposable2);
        
