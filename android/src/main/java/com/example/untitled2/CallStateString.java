@@ -1,4 +1,4 @@
-package com.example.plugin_code;
+package com.example.untitled2;
 
 import android.annotation.SuppressLint;
 import timber.log.Timber;
