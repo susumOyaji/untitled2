@@ -1,9 +1,9 @@
-package com.example.plugin_code;
+package com.example.untitled2;
 
 import android.app.Application;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-
+//import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import timber.log.Timber;
 
 public class App extends Application {
